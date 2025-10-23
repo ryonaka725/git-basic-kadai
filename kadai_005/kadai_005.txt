@@ -1,59 +1,111 @@
 PS C:\Users\ryoai> git config --global user.name "ryonaka725"
 PS C:\Users\ryoai> git config --global user.email "ryoairlines725@gmail.com"
-PS C:\Users\ryoai> cd C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial> mkdir git_challenge
+PS C:\Users\ryoai> cd C:\Users\ryoai\プログラミング学習用
+PS C:\Users\ryoai\プログラミング学習用> mkdir git_challenge
 
 
-    ディレクトリ: C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial
+    ディレクトリ: C:\Users\ryoai\プログラミング学習用
 
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
-d-----        2025/10/22     22:21                git_challenge
+d-----        2025/10/23     23:28                git_challenge
 
 
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial> cd git_challenge
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git init
-Initialized empty Git repository in C:/Users/ryoai/プログラミング学習用/GitHub_Tutorial/git_challenge/.git/
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git add hello_world.txt
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git commit -m "最初のコミット"
-[main (root-commit) d4d18cc] 最初のコミット
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 hello_world.txt
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git add hello_world.txt
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git status
-On branch main
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   hello_world.txt
-
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git commit -m "本来なら１回目のコミット"
-[main a851b70] 本来なら１回目のコミット
+PS C:\Users\ryoai\プログラミング学習用> cd git_challenge
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git init
+Initialized empty Git repository in C:/Users/ryoai/プログラミング学習用/git_challenge/.git/
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git add hello_world.txt
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git commit -m "１回目のコミット"
+[main (root-commit) d3e6c4b] １回目のコミット
  1 file changed, 1 insertion(+)
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git status
-On branch main
-nothing to commit, working tree clean
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git diff hello_world.txt
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git add hello_world.txt
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git commit -m "２回目のコミット"
-[main f655f10] ２回目のコミット
- 1 file changed, 2 insertions(+), 1 deletion(-)
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> git log
-commit f655f102e78a8795bf72e1d828727aae271f0b02 (HEAD -> main)
+ create mode 100644 hello_world.txt
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git diff hello_world.txt
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git diff --staged
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git log
+commit d3e6c4bf665bbcd82d89b66fcf1f8a56e140297f (HEAD -> main)
 Author: ryonaka725 <ryoairlines725@gmail.com>
-Date:   Wed Oct 22 22:38:51 2025 +0900
+Date:   Thu Oct 23 23:36:58 2025 +0900
+
+    １回目のコミット
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git add hello_world.txt
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git diff --staged
+diff --git a/hello_world.txt b/hello_world.txt
+index d743732..38aba30 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1,2 @@
+-hello,world!
+\ No newline at end of file
++hello,world!
++こんにちは、世界！
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git commit -m "２回目のコミット"
+[main c3456a4] ２回目のコミット
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git log
+commit c3456a4ec9c9fff899209fcc8c4612148c64b7f3 (HEAD -> main)
+Author: ryonaka725 <ryoairlines725@gmail.com>
+Date:   Thu Oct 23 23:43:40 2025 +0900
 
     ２回目のコミット
 
-commit a851b7027e3af5ce33ce7d87f4293e373022d692
+commit d3e6c4bf665bbcd82d89b66fcf1f8a56e140297f
 Author: ryonaka725 <ryoairlines725@gmail.com>
-Date:   Wed Oct 22 22:36:25 2025 +0900
+Date:   Thu Oct 23 23:36:58 2025 +0900
 
-    本来なら１回目のコミット
-
-commit d4d18cc8a80788d0a42df7dbef5e9334ef6c5a3c
+    １回目のコミット
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git log --oneline            
+c3456a4 (HEAD -> main) ２回目のコミット
+d3e6c4b １回目のコミット
+PS C:\Users\ryoai\プログラミング学習用\git_challenge> git log -p hello_world.txt
+commit c3456a4ec9c9fff899209fcc8c4612148c64b7f3 (HEAD -> main)
 Author: ryonaka725 <ryoairlines725@gmail.com>
-Date:   Wed Oct 22 22:32:08 2025 +0900
+Date:   Thu Oct 23 23:43:40 2025 +0900
 
-    最初のコミット
-PS C:\Users\ryoai\プログラミング学習用\GitHub_Tutorial\git_challenge> 
+    ２回目のコミット
+
+diff --git a/hello_world.txt b/hello_world.txt
+index d743732..38aba30 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1,2 @@
+-hello,world!
+\ No newline at end of file
++hello,world!
++こんにちは、世界！
+
+commit d3e6c4bf665bbcd82d89b66fcf1f8a56e140297f
+Author: ryonaka725 <ryoairlines725@gmail.com>
+Date:   Thu Oct 23 23:36:58 2025 +0900
+
+    １回目のコミット
+:
+commit c3456a4ec9c9fff899209fcc8c4612148c64b7f3 (HEAD -> main)
+Author: ryonaka725 <ryoairlines725@gmail.com>
+Date:   Thu Oct 23 23:43:40 2025 +0900
+
+    ２回目のコミット
+
+diff --git a/hello_world.txt b/hello_world.txt
+index d743732..38aba30 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1,2 @@
+-hello,world!
+\ No newline at end of file
++hello,world!
++こんにちは、世界！
+
+commit d3e6c4bf665bbcd82d89b66fcf1f8a56e140297f
+Author: ryonaka725 <ryoairlines725@gmail.com>
+Date:   Thu Oct 23 23:36:58 2025 +0900
+
+    １回目のコミット
+
+diff --git a/hello_world.txt b/hello_world.txt
+new file mode 100644
+index 0000000..d743732
+--- /dev/null
++++ b/hello_world.txt
+@@ -0,0 +1 @@
++hello,world!
